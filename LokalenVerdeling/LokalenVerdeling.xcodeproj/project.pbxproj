@@ -14,6 +14,8 @@
 		3C718A9F2114901E006F7F9D /* Locatie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C718A9E2114901E006F7F9D /* Locatie.swift */; };
 		3C718AA121149287006F7F9D /* Vergadering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C718AA021149287006F7F9D /* Vergadering.swift */; };
 		3C718AA321149296006F7F9D /* Activiteit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C718AA221149296006F7F9D /* Activiteit.swift */; };
+		3C981C712115E88C001181E5 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C702115E88C001181E5 /* LocationsViewController.swift */; };
+		3C981C732115ECAA001181E5 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C722115ECAA001181E5 /* LocationTableViewCell.swift */; };
 		AAABDA6A50C81D9EF7369C4F /* Pods_LokalenVerdeling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBDEEA297E6FF1AA0802D21 /* Pods_LokalenVerdeling.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		3C718A9E2114901E006F7F9D /* Locatie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locatie.swift; sourceTree = "<group>"; };
 		3C718AA021149287006F7F9D /* Vergadering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vergadering.swift; sourceTree = "<group>"; };
 		3C718AA221149296006F7F9D /* Activiteit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activiteit.swift; sourceTree = "<group>"; };
+		3C981C702115E88C001181E5 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		3C981C722115ECAA001181E5 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		4FBDEEA297E6FF1AA0802D21 /* Pods_LokalenVerdeling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LokalenVerdeling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72A43B37D22417364A10D623 /* Pods-LokalenVerdeling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LokalenVerdeling.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LokalenVerdeling/Pods-LokalenVerdeling.debug.xcconfig"; sourceTree = "<group>"; };
 		C6BD9C266F5DA5CCAD0898F0 /* Pods-LokalenVerdeling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LokalenVerdeling.release.xcconfig"; path = "Pods/Target Support Files/Pods-LokalenVerdeling/Pods-LokalenVerdeling.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 		3C718A8821148EC9006F7F9D /* LokalenVerdeling */ = {
 			isa = PBXGroup;
 			children = (
-				3C718A9D21148FBD006F7F9D /* Services */,
+				3C981C742115ECE2001181E5 /* Cells */,
 				3C718A9C21148FA7006F7F9D /* ViewControllers */,
 				3C718A9B21148F95006F7F9D /* Model */,
 				3C718A8921148EC9006F7F9D /* AppDelegate.swift */,
@@ -90,15 +94,17 @@
 		3C718A9C21148FA7006F7F9D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3C981C702115E88C001181E5 /* LocationsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		3C718A9D21148FBD006F7F9D /* Services */ = {
+		3C981C742115ECE2001181E5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3C981C722115ECAA001181E5 /* LocationTableViewCell.swift */,
 			);
-			path = Services;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		5DD3EB0DBB069635D82244E0 /* Frameworks */ = {
@@ -232,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C981C732115ECAA001181E5 /* LocationTableViewCell.swift in Sources */,
 				3C718A8A21148EC9006F7F9D /* AppDelegate.swift in Sources */,
+				3C981C712115E88C001181E5 /* LocationsViewController.swift in Sources */,
 				3C718AA321149296006F7F9D /* Activiteit.swift in Sources */,
 				3C718AA121149287006F7F9D /* Vergadering.swift in Sources */,
 				3C718A9F2114901E006F7F9D /* Locatie.swift in Sources */,
