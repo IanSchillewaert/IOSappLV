@@ -63,6 +63,7 @@ class Locatie: Object {
             realm.add(bib)
             realm.add(kollebloem)
         }
+        print("created Locations")
         return kollebloem
     }
     

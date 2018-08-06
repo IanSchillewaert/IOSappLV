@@ -18,6 +18,7 @@ class LocationsViewController: UIViewController {
 
         let realm = try! Realm()
         Locatie.checkLocations(in: realm)
+        //tijdelijk
         Vergadering.checkSessions(in: realm)
         Locations = Array(realm.objects(Locatie.self))
     }

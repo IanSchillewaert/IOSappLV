@@ -15,6 +15,8 @@
 		3C718AA321149296006F7F9D /* Activiteit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C718AA221149296006F7F9D /* Activiteit.swift */; };
 		3C9408B32118610200687AB1 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9408B22118610200687AB1 /* LocationViewController.swift */; };
 		3C9408B621187BCE00687AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9408B421187BCD00687AB1 /* Main.storyboard */; };
+		3C9408B82118A8B800687AB1 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9408B72118A8B800687AB1 /* SessionsViewController.swift */; };
+		3C9408BA2118A8C600687AB1 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9408B92118A8C600687AB1 /* SessionViewController.swift */; };
 		3C981C712115E88C001181E5 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C702115E88C001181E5 /* LocationsViewController.swift */; };
 		3C981C732115ECAA001181E5 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C981C722115ECAA001181E5 /* LocationTableViewCell.swift */; };
 		AAABDA6A50C81D9EF7369C4F /* Pods_LokalenVerdeling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBDEEA297E6FF1AA0802D21 /* Pods_LokalenVerdeling.framework */; };
@@ -31,6 +33,8 @@
 		3C718AA221149296006F7F9D /* Activiteit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activiteit.swift; sourceTree = "<group>"; };
 		3C9408B22118610200687AB1 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		3C9408B521187BCD00687AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C9408B72118A8B800687AB1 /* SessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
+		3C9408B92118A8C600687AB1 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		3C981C702115E88C001181E5 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		3C981C722115ECAA001181E5 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		4FBDEEA297E6FF1AA0802D21 /* Pods_LokalenVerdeling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LokalenVerdeling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,8 @@
 			children = (
 				3C981C702115E88C001181E5 /* LocationsViewController.swift */,
 				3C9408B22118610200687AB1 /* LocationViewController.swift */,
+				3C9408B72118A8B800687AB1 /* SessionsViewController.swift */,
+				3C9408B92118A8C600687AB1 /* SessionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -244,8 +250,10 @@
 				3C9408B32118610200687AB1 /* LocationViewController.swift in Sources */,
 				3C981C732115ECAA001181E5 /* LocationTableViewCell.swift in Sources */,
 				3C718A8A21148EC9006F7F9D /* AppDelegate.swift in Sources */,
+				3C9408BA2118A8C600687AB1 /* SessionViewController.swift in Sources */,
 				3C981C712115E88C001181E5 /* LocationsViewController.swift in Sources */,
 				3C718AA321149296006F7F9D /* Activiteit.swift in Sources */,
+				3C9408B82118A8B800687AB1 /* SessionsViewController.swift in Sources */,
 				3C718AA121149287006F7F9D /* Vergadering.swift in Sources */,
 				3C718A9F2114901E006F7F9D /* Locatie.swift in Sources */,
 			);
