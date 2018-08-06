@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Locations View Controller-->
+        <!--Locaties-->
         <scene sceneID="q0f-SD-gKf">
             <objects>
-                <viewController id="dQv-4y-JG7" customClass="LocationsViewController" customModule="LokalenVerdeling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Locaties" id="dQv-4y-JG7" customClass="LocationsViewController" customModule="LokalenVerdeling" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6sP-ga-Bbz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,6 +57,7 @@
                                         <connections>
                                             <outlet property="LocationName" destination="5mo-ld-f18" id="fV5-py-y0m"/>
                                             <outlet property="LocationSpaces" destination="NL6-XJ-RMQ" id="xOj-8Y-nbv"/>
+                                            <segue destination="k0Q-1v-ESQ" kind="show" identifier="showLocation" id="WRP-gM-xlF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -75,14 +76,95 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GXa-Vr-Irz"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ycD-gx-5y4"/>
+                    <navigationItem key="navigationItem" title="Locaties" id="ycD-gx-5y4"/>
                     <connections>
                         <outlet property="tableView" destination="bw2-hd-haq" id="3Bz-8c-cCX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BA4-64-M0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268" y="80.50974512743629"/>
+            <point key="canvasLocation" x="1159" y="81"/>
+        </scene>
+        <!--Locatie-->
+        <scene sceneID="zij-4d-5Tp">
+            <objects>
+                <viewController title="Locatie" id="k0Q-1v-ESQ" customClass="LocationViewController" customModule="LokalenVerdeling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lgf-kj-c1L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoT-KF-FmG">
+                                <rect key="frame" x="16" y="80" width="351" height="25"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Omschrijving:">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="AvenirNext-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocD-7t-qjT">
+                                <rect key="frame" x="8" y="540" width="239" height="25"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Aantal beschikbare plaatsen:">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="AvenirNext-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plaatsentxt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eM9-1J-XJd">
+                                <rect key="frame" x="268.5" y="544" width="90.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.1678815008725163" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdl-cw-5qf">
+                                <rect key="frame" x="32" y="613" width="311" height="30"/>
+                                <state key="normal" title="Overzicht vrije vergaderingen"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dI2-Qx-CD5">
+                                <rect key="frame" x="16" y="113" width="351" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="U99-57-7hx"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dI2-Qx-CD5" firstAttribute="leading" secondItem="kMs-d3-O0H" secondAttribute="leading" constant="16" id="0N2-bu-NGA"/>
+                            <constraint firstItem="jdl-cw-5qf" firstAttribute="leading" secondItem="kMs-d3-O0H" secondAttribute="leading" constant="32" id="Bza-mv-bNc"/>
+                            <constraint firstItem="kMs-d3-O0H" firstAttribute="trailing" secondItem="eM9-1J-XJd" secondAttribute="trailing" constant="16" id="DaV-Bj-cF6"/>
+                            <constraint firstItem="kMs-d3-O0H" firstAttribute="trailing" secondItem="jdl-cw-5qf" secondAttribute="trailing" constant="32" id="HEO-Z3-HTw"/>
+                            <constraint firstItem="ocD-7t-qjT" firstAttribute="leading" secondItem="kMs-d3-O0H" secondAttribute="leading" constant="8" id="L2e-2w-BeI"/>
+                            <constraint firstItem="CoT-KF-FmG" firstAttribute="leading" secondItem="kMs-d3-O0H" secondAttribute="leading" constant="16" id="UJp-wp-iNE"/>
+                            <constraint firstItem="jdl-cw-5qf" firstAttribute="centerX" secondItem="lgf-kj-c1L" secondAttribute="centerX" id="XPY-je-Skd"/>
+                            <constraint firstItem="CoT-KF-FmG" firstAttribute="top" secondItem="kMs-d3-O0H" secondAttribute="top" constant="16" id="Z9S-nI-MlZ"/>
+                            <constraint firstItem="jdl-cw-5qf" firstAttribute="top" secondItem="eM9-1J-XJd" secondAttribute="bottom" constant="48" id="eJ2-SR-QL5"/>
+                            <constraint firstItem="dI2-Qx-CD5" firstAttribute="top" secondItem="CoT-KF-FmG" secondAttribute="bottom" constant="8" id="koa-MN-u83"/>
+                            <constraint firstItem="kMs-d3-O0H" firstAttribute="trailing" secondItem="CoT-KF-FmG" secondAttribute="trailing" constant="8" id="nho-Zw-uLi"/>
+                            <constraint firstItem="jdl-cw-5qf" firstAttribute="top" secondItem="ocD-7t-qjT" secondAttribute="bottom" constant="48" id="o45-CS-wLJ"/>
+                            <constraint firstItem="kMs-d3-O0H" firstAttribute="trailing" secondItem="dI2-Qx-CD5" secondAttribute="trailing" constant="8" id="wRu-pp-XGc"/>
+                            <constraint firstItem="kMs-d3-O0H" firstAttribute="bottom" secondItem="jdl-cw-5qf" secondAttribute="bottom" constant="24" id="yjL-Xw-zGt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kMs-d3-O0H"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NwZ-nx-mEB"/>
+                    <connections>
+                        <outlet property="Descriptiontxt" destination="dI2-Qx-CD5" id="Oo4-hu-PWV"/>
+                        <outlet property="Placestxt" destination="eM9-1J-XJd" id="A6h-TZ-SGG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ly9-0d-vHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989.5999999999999" y="80.50974512743629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bn4-pw-qXH">

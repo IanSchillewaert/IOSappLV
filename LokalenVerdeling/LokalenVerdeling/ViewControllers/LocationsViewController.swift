@@ -14,12 +14,23 @@ class LocationsViewController: UIViewController {
     var Locations: [Locatie] = []
     
     override func viewDidLoad() {
-        self.title = "Locaties"
         super.viewDidLoad()
 
         let realm = try! Realm()
         Locatie.checkLocations(in: realm)
         Locations = Array(realm.objects(Locatie.self))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "showLocation"
+        {
+            let locationViewController = (segue.destination ) as! LocationViewController
+            let selection = tableView.indexPathForSelectedRow!
+            locationViewController.location = Locations[selection.row]
+            let naam = locationViewController.location?.omschrijving
+            print(naam)
+            tableView.deselectRow(at: selection, animated: true)
+        }
     }
 }
 
@@ -36,5 +47,9 @@ extension LocationsViewController: UITableViewDataSource, UITableViewDelegate{
         cell.setLocation(location: location)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("something silly")
     }
 }
