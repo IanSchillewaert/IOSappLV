@@ -52,7 +52,8 @@ class Locatie: Object {
         let kollebloem = Locatie(naam: "Kollebloem", omschrijving: "Speelveld/bos de Kollebloem", plaatsen: 3)
         
         try! realm.write {
-            realm.deleteAll()
+            let allLocations = realm.objects(Locatie.self)
+            realm.delete(allLocations)
             realm.add(beneden)
             realm.add(keuken)
             realm.add(boven)

@@ -18,6 +18,7 @@ class LocationsViewController: UIViewController {
 
         let realm = try! Realm()
         Locatie.checkLocations(in: realm)
+        Vergadering.checkSessions(in: realm)
         Locations = Array(realm.objects(Locatie.self))
     }
     
@@ -27,8 +28,6 @@ class LocationsViewController: UIViewController {
             let locationViewController = (segue.destination ) as! LocationViewController
             let selection = tableView.indexPathForSelectedRow!
             locationViewController.location = Locations[selection.row]
-            let naam = locationViewController.location?.omschrijving
-            print(naam)
             tableView.deselectRow(at: selection, animated: true)
         }
     }

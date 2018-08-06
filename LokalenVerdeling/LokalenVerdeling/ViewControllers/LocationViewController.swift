@@ -18,7 +18,7 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         self.title = location?.naam
         Descriptiontxt.text = location?.omschrijving
-//        Placestxt.text = String?(location?.plaatsen)
+        Placestxt.text = String(location!.plaatsen)
         super.viewDidLoad()
 
     }
