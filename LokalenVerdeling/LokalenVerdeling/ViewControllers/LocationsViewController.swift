@@ -10,12 +10,12 @@ import UIKit
 import RealmSwift
 
 class LocationsViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     var Locations: [Locatie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let realm = try! Realm()
         Locatie.checkLocations(in: realm)
         Locations = Array(realm.objects(Locatie.self))
@@ -43,7 +43,8 @@ extension LocationsViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier:  "LocationCell") as! LocationTableViewCell
         
         cell.setLocation(location: location)
-        
+        cell.accessoryType = .disclosureIndicator
+
         return cell
     }
     

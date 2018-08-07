@@ -20,6 +20,16 @@ class SessionsViewController: UIViewController {
         Vergadering.checkSessions(in: realm)
         sessions = Array(realm.objects(Vergadering.self))
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "showSession"
+        {
+            let sessionViewController = (segue.destination ) as! SessionViewController
+            let selection = tableView.indexPathForSelectedRow!
+            sessionViewController.vergadering = sessions[selection.row]
+            tableView.deselectRow(at: selection, animated: true)
+        }
+    }
 }
 extension SessionsViewController: UITableViewDataSource, UITableViewDelegate{
     
@@ -39,6 +49,8 @@ extension SessionsViewController: UITableViewDataSource, UITableViewDelegate{
         if(session.activiteiten.count != 6){
             cell.backgroundColor = UIColor.white
         }
+        cell.accessoryType = .detailButton
+
         return cell
     }
     
