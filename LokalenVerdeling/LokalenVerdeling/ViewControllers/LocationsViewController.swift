@@ -18,8 +18,6 @@ class LocationsViewController: UIViewController {
 
         let realm = try! Realm()
         Locatie.checkLocations(in: realm)
-        //tijdelijk
-        Vergadering.checkSessions(in: realm)
         Locations = Array(realm.objects(Locatie.self))
     }
     
@@ -50,6 +48,6 @@ extension LocationsViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("something silly")
+        print("clicked location")
     }
 }

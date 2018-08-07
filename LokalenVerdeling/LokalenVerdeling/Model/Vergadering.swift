@@ -52,9 +52,16 @@ class Vergadering: Object {
         let act1 = Activiteit(datum: start, tak: "Bevers", omschrijving: "eerste vergadering bevers", locatie: Locatie(naam: "test", omschrijving: "Grote zaal beneden", plaatsen: 2))
         let act2 = Activiteit(datum: start, tak: "Welpen", omschrijving: "eerste vergadering welpen", locatie: Locatie(naam: "test2", omschrijving: "Grote zaal beneden", plaatsen: 2))
         let act3 = Activiteit(datum: start, tak: "Wolven", omschrijving: "eerste vergadering wolven", locatie: Locatie(naam: "test3", omschrijving: "Zaal boven", plaatsen: 1))
+        let act4 = Activiteit(datum: start, tak: "JVG", omschrijving: "eerste vergadering JVG's", locatie: Locatie(naam: "test4", omschrijving: "Grote zaal beneden", plaatsen: 2))
+        let act5 = Activiteit(datum: start, tak: "VG", omschrijving: "eerste vergadering VG's", locatie: Locatie(naam: "test5", omschrijving: "Grote zaal beneden", plaatsen: 2))
+        let act6 = Activiteit(datum: start, tak: "Seniors", omschrijving: "eerste vergadering seniors", locatie: Locatie(naam: "test6", omschrijving: "Zaal boven", plaatsen: 1))
         vergadering1.activiteiten.append(act1)
         vergadering1.activiteiten.append(act2)
         vergadering1.activiteiten.append(act3)
+        vergadering1.activiteiten.append(act4)
+        vergadering1.activiteiten.append(act5)
+        vergadering1.activiteiten.append(act6)
+
         
         try! realm.write {
             let allSessions = realm.objects(Vergadering.self)

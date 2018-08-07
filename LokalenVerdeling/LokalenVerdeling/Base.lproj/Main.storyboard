@@ -99,7 +99,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FcD-qo-357">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SessionCell" id="FcD-qo-357" customClass="SessionTableViewCell" customModule="LokalenVerdeling" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FcD-qo-357" id="BZR-8p-z5H">
@@ -126,8 +126,16 @@
                                                 <constraint firstItem="VPk-ze-GKt" firstAttribute="leading" secondItem="BZR-8p-z5H" secondAttribute="leadingMargin" constant="8" id="lva-VL-ZO5"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Title" destination="VPk-ze-GKt" id="4kr-AN-REr"/>
+                                            <outlet property="activities" destination="o5L-Kk-nlx" id="6Pc-4j-3hx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LpS-ls-4bE" id="50E-Df-Nz0"/>
+                                    <outlet property="delegate" destination="LpS-ls-4bE" id="SFI-DO-GPh"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,6 +147,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hOQ-ek-8Ag"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="qgu-1X-bAc" id="qgA-tM-EPP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEd-JX-g0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,5 +10,11 @@ import UIKit
 
 class SessionTableViewCell: UITableViewCell {
 
-
+    @IBOutlet weak var Title: UILabel! 
+    @IBOutlet weak var activities: UILabel!
+    
+    func setSession(session: Vergadering){
+        Title.text = session.datum
+        activities.text = String(session.activiteiten.count) + "/6 takken ingevuld"
+    }
 }
