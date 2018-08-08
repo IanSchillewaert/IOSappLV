@@ -17,6 +17,7 @@ class SessionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = try! Realm()
+        Locatie.checkLocations(in: realm)
         Vergadering.checkSessions(in: realm)
         sessions = Array(realm.objects(Vergadering.self))
     }
