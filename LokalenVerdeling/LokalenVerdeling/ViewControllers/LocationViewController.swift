@@ -22,4 +22,11 @@ class LocationViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "showFilteredSessions"
+        {
+            let sessionsViewController = (segue.destination as! UINavigationController).topViewController as! SessionsViewController
+            sessionsViewController.location = location
+        }
+    }
 }

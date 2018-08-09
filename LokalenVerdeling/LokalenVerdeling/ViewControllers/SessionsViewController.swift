@@ -13,13 +13,26 @@ class SessionsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var sessions: [Vergadering] = []
+    var location: Locatie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = try! Realm()
         Locatie.checkLocations(in: realm)
         Vergadering.checkSessions(in: realm)
-        sessions = Array(realm.objects(Vergadering.self))
+        if location == nil{
+            sessions = Array(realm.objects(Vergadering.self))
+        }
+        else if location != nil{
+            var filteredSessions: [Vergadering] = []
+            sessions = Array(realm.objects(Vergadering.self))
+            sessions.forEach { (session) in
+                if session.availableLocations.contains(location!){
+                    filteredSessions.append(session)
+                }
+            }
+            sessions = filteredSessions
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

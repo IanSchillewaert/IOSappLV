@@ -148,13 +148,36 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hOQ-ek-8Ag"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Vergaderingen" id="y8E-b6-DTl">
+                        <barButtonItem key="leftBarButtonItem" title="HOME" id="dWl-dl-iDy">
+                            <connections>
+                                <segue destination="7UD-VY-rPu" kind="show" identifier="home" id="5Zp-69-nJZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qgu-1X-bAc" id="qgA-tM-EPP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEd-JX-g0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="930"/>
+            <point key="canvasLocation" x="1990" y="920"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PhK-t1-Bpk">
+            <objects>
+                <navigationController id="Vix-Ll-XtZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iFV-vO-PRS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LpS-ls-4bE" kind="relationship" relationship="rootViewController" id="27v-EX-Bwq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="He7-CD-CdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="920"/>
         </scene>
         <!--Vergadering-->
         <scene sceneID="tCw-3t-YcR">
@@ -279,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kC-Qx-Pge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.5999999999999" y="929.68515742128943"/>
+            <point key="canvasLocation" x="2854" y="920"/>
         </scene>
         <!--Activiteit-->
         <scene sceneID="RoB-1i-PE3">
@@ -435,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WB1-VT-jSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3014" y="930"/>
+            <point key="canvasLocation" x="3846" y="920"/>
         </scene>
         <!--Locatie-->
         <scene sceneID="zij-4d-5Tp">
@@ -477,6 +500,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdl-cw-5qf">
                                 <rect key="frame" x="32" y="613" width="311" height="30"/>
                                 <state key="normal" title="Overzicht vrije vergaderingen"/>
+                                <connections>
+                                    <segue destination="Vix-Ll-XtZ" kind="show" identifier="showFilteredSessions" id="yL5-Yh-iQr"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI2-Qx-CD5">
                                 <rect key="frame" x="16" y="113" width="351" height="200"/>
@@ -600,7 +626,7 @@
                     <navigationItem key="navigationItem" title="HOME" id="jb9-Me-HVv">
                         <barButtonItem key="leftBarButtonItem" title="Vergaderingen" id="qia-L1-9ok">
                             <connections>
-                                <segue destination="LpS-ls-4bE" kind="show" id="nmp-67-quA"/>
+                                <segue destination="Vix-Ll-XtZ" kind="show" id="EfQ-LO-6Df"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Locaties" id="13n-YH-MVq">
@@ -619,6 +645,7 @@
         <image name="kangoeroe" width="1705" height="1644"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bvD-17-lsx"/>
+        <segue reference="Ksb-MJ-8fP"/>
+        <segue reference="yL5-Yh-iQr"/>
     </inferredMetricsTieBreakers>
 </document>
