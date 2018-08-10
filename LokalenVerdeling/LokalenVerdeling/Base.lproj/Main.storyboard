@@ -202,7 +202,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="592"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityCell" id="cde-ON-kPS" customClass="ActivityTableViewCell" customModule="LokalenVerdeling" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActivityCell" id="cde-ON-kPS" customClass="ActivityTableViewCell" customModule="LokalenVerdeling" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cde-ON-kPS" id="cdr-gc-O7Z">
@@ -227,13 +227,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Omschrijving:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fi-oM-4Jo">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Omschrijving:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fi-oM-4Jo">
                                                     <rect key="frame" x="15" y="87" width="116" height="25"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-wM-fMP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="499" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgd-wM-fMP">
                                                     <rect key="frame" x="141" y="88" width="41" height="22"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -251,6 +251,7 @@
                                                 <constraint firstItem="FVR-wh-k2y" firstAttribute="top" secondItem="cdr-gc-O7Z" secondAttribute="topMargin" constant="14" id="CKT-kB-53h"/>
                                                 <constraint firstItem="OU7-c2-DlL" firstAttribute="leading" secondItem="cdr-gc-O7Z" secondAttribute="leadingMargin" id="Car-yk-LBM"/>
                                                 <constraint firstItem="Xgd-wM-fMP" firstAttribute="top" secondItem="s4e-7Z-204" secondAttribute="bottom" constant="10" id="Fsh-eh-KZi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xgd-wM-fMP" secondAttribute="trailing" constant="16" id="Iou-rc-uDL"/>
                                                 <constraint firstItem="s4e-7Z-204" firstAttribute="top" secondItem="FVR-wh-k2y" secondAttribute="bottom" constant="10" id="LRS-fk-BKw"/>
                                                 <constraint firstItem="s4e-7Z-204" firstAttribute="leading" secondItem="oKH-wt-LaP" secondAttribute="trailing" constant="60" id="MC2-hm-zuG"/>
                                                 <constraint firstItem="FVR-wh-k2y" firstAttribute="leading" secondItem="cdr-gc-O7Z" secondAttribute="leadingMargin" id="N7X-ZL-yh7"/>
