@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Toast_Swift
 
 class ActivityViewController: UIViewController {
     
@@ -91,26 +92,11 @@ class ActivityViewController: UIViewController {
             if(selectedLocation != nil && selectedGroup != nil && txtDescription.text != ""){
                 activity = Activiteit(datum: vergadering!.datum, tak: selectedGroup!, omschrijving: txtDescription.text, locatie: selectedLocation!)
                 createAndSaveActivity(activity: activity!)
-                /*let realm = try! Realm()
-                try! realm.write {
-//                  activity maken en toevoegen
-                    activity = Activiteit(datum: vergadering!.datum, tak: selectedGroup!, omschrijving: txtDescription.text, locatie: selectedLocation!)
-                    realm.add(activity!)
-                    vergadering!.activiteiten.append(activity!)
-//                  tak weghalen uit lijst met beschickbare takken en toevoegen aan gebruikte
-                    let indexgroup = vergadering!.availableGroups.index(of: selectedGroup!)
-                    vergadering!.availableGroups.remove(at: indexgroup!)
-                    vergadering!.usedGroups.append(selectedGroup!)
-//                  Locatie toevoegen aan gebruikte locaties en kijken of limiet is bereikt, dan verwijderen
-                    vergadering!.usedLocations.append(selectedLocation!)
-                    let used = vergadering!.usedLocations.filter{$0 == self.selectedLocation!}.count
-                    if(selectedLocation!.plaatsen <= used){
-                        let indexlocation = vergadering!.availableLocations.index(of: selectedLocation!)
-                        vergadering!.availableLocations.remove(at: indexlocation!)
-                    }
-                }*/
-                _ = navigationController?.popToRootViewController(animated: true)
-                //TOAST
+                btnSave.isEnabled = false
+                self.view.makeToast("Activiteit succesvol aangemaakt", duration: 1.5, position: .top)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+                }
             }
         }
         else if activity != nil{
@@ -136,8 +122,11 @@ class ActivityViewController: UIViewController {
                 }
                 createAndSaveActivity(activity: activity!)
             }
-            _ = navigationController?.popToRootViewController(animated: true)
-            //TOAST
+            btnSave.isEnabled = false
+            self.view.makeToast("Activiteit succesvol bijgewerkt!", duration: 1.5, position: .top)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                _ = self.navigationController?.popToRootViewController(animated: true)
+            }
         }
         update = false
     }

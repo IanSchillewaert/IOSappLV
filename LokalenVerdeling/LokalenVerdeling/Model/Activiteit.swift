@@ -15,7 +15,7 @@ class Activiteit: Object {
     @objc dynamic var datum = ""
     @objc dynamic var tak = ""
     @objc dynamic var omschrijving = ""
-    @objc dynamic var locatie: Locatie? = Locatie(naam: "geen", omschrijving: "geen", plaatsen: 0)
+    @objc dynamic var locatie: Locatie?
 
     //init
     convenience init(datum:String, tak:String, omschrijving:String, locatie:Locatie)
